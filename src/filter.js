@@ -9,7 +9,7 @@ module.exports = function Filter(string) {
    * @returns {boolean}
    */
   function match(tags) {
-    var include = (parsed.is.length === 0)  || matchFilter(tags, parsed.is);
+    var include = (parsed.is.length === 0) || matchFilter(tags, parsed.is);
     var exclude = (parsed.not.length !== 0) && matchFilter(tags, parsed.not);
     return include && !exclude;
   }
@@ -39,7 +39,7 @@ module.exports = function Filter(string) {
 
 function compile(string) {
   return {
-    is:  extract(string, /is:([^\s]+)/g),
+    is: extract(string, /is:([^\s]+)/g),
     not: extract(string, /not:([^\s]+)/g)
   };
 }
@@ -54,8 +54,9 @@ function extract(string, regex) {
 
 function matchFilter(tagList, toMatch) {
   return (toMatch.filter(function (tags) {
-    return (tags.filter(function (tag) {
+    const x =tags.filter(function (tag) {
       return tagList.includes(tag);
-    }).length > 0);
+    })
+    return x.length == tags.length;
   }).length > 0);
 }

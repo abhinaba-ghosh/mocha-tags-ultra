@@ -3,7 +3,7 @@
 
 
 ```bash
-npm install mocha-tags --save-dev
+npm install mocha-tags-ultra --save-dev
 ```
 
 ## Quick example
@@ -76,7 +76,7 @@ You might want to exclude certain tags based on complex logic.
 This is not easy to define from the command line, so `mocha-tags` exposes its filter programmatically.
 
 ```js
-var tags = require('mocha-tags');
+var tags = require('mocha-tags-ultra');
 
 // either replace the entire filter
 tags.filter = new tags.Filter('not:trading-hours');
@@ -100,7 +100,7 @@ so you should always notice any test that was skipped by accident.
 It also helps to add the following at the top of your main test file / spec helper.
 
 ```js
-var tags = require('mocha-tags');
+var tags = require('mocha-tags-ultra');
 console.log('Test filter: ', tags.filter);
 ```
 

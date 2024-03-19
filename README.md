@@ -1,14 +1,6 @@
-# mocha-tags
+# mocha-tags-ultra
 
-[![NPM](http://img.shields.io/npm/v/mocha-tags.svg?style=flat)](https://npmjs.org/package/mocha-tags)
-[![License](http://img.shields.io/npm/l/mocha-tags.svg?style=flat)](https://github.com/TabDigital/mocha-tags)
-[![Build Status](http://img.shields.io/travis/TabDigital/mocha-tags.svg?style=flat)](http://travis-ci.org/TabDigital/mocha-tags)
-[![Dependencies](http://img.shields.io/david/TabDigital/mocha-tags.svg?style=flat)](https://david-dm.org/TabDigital/mocha-tags)
-[![Dev dependencies](http://img.shields.io/david/dev/TabDigital/mocha-tags.svg?style=flat)](https://david-dm.org/TabDigital/mocha-tags)
 
-- Do you have integration tests that connect to your internal network?
-- Do you need to skip them when running on Travis?
-- Or do you want to tag "slow" and "fast" tests, and run them separately?
 
 ```bash
 npm install mocha-tags --save-dev

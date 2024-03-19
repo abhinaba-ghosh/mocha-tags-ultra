@@ -102,3 +102,6 @@ public
 
 # Webstorm
 .idea
+
+# package.lock file
+package-lock.json

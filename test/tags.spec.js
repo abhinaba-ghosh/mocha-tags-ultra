@@ -30,6 +30,11 @@ describe('mocha-tags', function() {
             expect(new tags.Filter('is:foo is:baz').match(list)).to.be.true;
         });
 
+        it('Should match multiple tags using + with is', function () {
+            expect(new tags.Filter('is:foo+bar').match(list)).to.be.true;
+            expect(new tags.Filter('is:foo+buzz').match(list)).to.be.false
+        });
+
         it('Should not match multiple with not', function () {
             expect(new tags.Filter('not:foo not:bar').match(list)).to.be.false;
             expect(new tags.Filter('not:buzz not:bin').match(list)).to.be.true;
